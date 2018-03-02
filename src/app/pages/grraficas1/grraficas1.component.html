@@ -1,3 +1,39 @@
-<p>
-  grraficas1 works!
-</p>
+<div class="row">
+
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">{{graficos.grafico1.leyenda}}</h4>
+                <app-graficodona [Data]="graficos.grafico1.data" [Label]="graficos.grafico1.labels"></app-graficodona>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">{{graficos.grafico2.leyenda}}</h4>
+                <app-graficodona [Data]="graficos.grafico2.data" [Label]="graficos.grafico2.labels"></app-graficodona>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">{{graficos.grafico3.leyenda}}</h4>
+                <app-graficodona [Data]="graficos.grafico3.data" [Label]="graficos.grafico3.labels"></app-graficodona>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">{{graficos.grafico4.leyenda}}</h4>
+                <app-graficodona [Data]="graficos.grafico4.data" [Label]="graficos.grafico4.labels"></app-graficodona>
+            </div>
+        </div>
+    </div>
+</div>
