@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 // tslint:disable-next-line:import-blacklist
-import { Observable } from 'rxjs/Rx';
+import { Observable, Subscription } from 'rxjs/Rx';
 
 @Component({
   selector: 'app-rxjs',
@@ -9,11 +9,14 @@ import { Observable } from 'rxjs/Rx';
 })
 export class RxjsComponent implements OnInit, OnDestroy {
 
+
+  subcription: Subscription;
+
   constructor() {
 
 
 
-    this.regresaObservable()
+    this.subcription =  this.regresaObservable()
     .subscribe(
       numero => console.log( 'subs', numero ),
       error => console.error('Error en el obs (2 veces)', error),
@@ -28,7 +31,7 @@ export class RxjsComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    console.log('la pagina se va a cerrar');
+    this.subcription.unsubscribe();
 
   }
 
